@@ -1,8 +1,6 @@
-version: '3'
-
 services:
   api01:
     container_name: api01
-    build: ./api
+    build: ./helloworldapi
     ports:
-      - "3000:3000"
+      - "3001:3000"
