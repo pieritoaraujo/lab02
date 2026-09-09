@@ -1,6 +1,19 @@
 services:
-  api01:
-    container_name: api01
+  api1:
+    container_name: api1
     build: ./helloworldapi
     ports:
       - "3001:3000"
+
+  api2:
+    container_name: api2
+    build: ./helloworldapi
+    ports:
+      - "3000:3000"
+
+  api3:
+    container_name: api3
+    build: ./helloworldapi
+    ports:
+      - "3002:3000"
+
