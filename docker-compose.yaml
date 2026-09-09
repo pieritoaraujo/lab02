@@ -5,17 +5,21 @@ services:
     ports:
       - 3001:3000
     environment:
-      MESSAGE: AraujoRodriguez
+      MESSAGE: ${MESSAGE_01}
 
   api2:
     container_name: api2
     build: ./helloworldapi
     ports:
       - 3000:3000
+    environment:
+      MESSAGE: ${MESSAGE_02}
 
   api3:
     container_name: api3
     build: ./helloworldapi
     ports:
       - 3002:3000
+    environment:
+      MESSAGE: ${MESSAGE_03}
 
