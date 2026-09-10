@@ -27,7 +27,12 @@ services:
   db:
     image: postgres:13
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRESS_DB: mydatabase
+      POSTGRES_USER: ${POSTGRES_BD_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_BD_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_BD_NAME}
 
+    volumes:
+      - postgresData:/var/lib/postgresql/data
+
+volumes:
+  postgresData:
